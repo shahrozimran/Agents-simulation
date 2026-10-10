@@ -1,0 +1,8 @@
+flowchart LR
+    P[Input / perception] --> D[Explore or exploit route values]
+    D --> A[Action]
+    A --> E[Environment]
+    E --> P
+    C[Learned route values] --> D
+    E --> R[Outcome / reward]
+    R --> C

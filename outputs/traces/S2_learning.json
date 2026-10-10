@@ -1,0 +1,4618 @@
+{
+  "run_id": "5bf54140aaeb4e4f95e367e157e2c38d",
+  "created_at": "2026-10-10T11:53:47.743712+00:00",
+  "agent": "Learning",
+  "scenario": {
+    "scenario_id": "S2",
+    "name": "Heavy traffic / alternative routes",
+    "routes": [
+      {
+        "route_id": "A",
+        "distance_km": 5,
+        "base_travel_min": 10,
+        "cost": 100,
+        "traffic_multiplier": 2.2,
+        "traffic": "heavy",
+        "available": true,
+        "well_lit": false,
+        "flood_risk": 0.8
+      },
+      {
+        "route_id": "B",
+        "distance_km": 8,
+        "base_travel_min": 16,
+        "cost": 150,
+        "traffic_multiplier": 1.1,
+        "traffic": "light",
+        "available": true,
+        "well_lit": true,
+        "flood_risk": 0.1
+      },
+      {
+        "route_id": "C",
+        "distance_km": 6,
+        "base_travel_min": 12,
+        "cost": 120,
+        "traffic_multiplier": 1.3,
+        "traffic": "moderate",
+        "available": true,
+        "well_lit": true,
+        "flood_risk": 0.3
+      }
+    ],
+    "deadline_min": 35.0,
+    "weather": "clear",
+    "weather_multiplier": 1.0,
+    "urgent": false,
+    "prep_min": 4.0,
+    "handling_min": 1.0,
+    "dropoff_min": 2.0,
+    "seed": 42,
+    "noise": false,
+    "max_time_min": 120.0,
+    "events": [],
+    "context": {
+      "time_of_day": "day",
+      "food_type": "standard",
+      "customer_preference": "balanced",
+      "restaurant_backlog_min": 0.0
+    }
+  },
+  "result": {
+    "run_id": "5bf54140aaeb4e4f95e367e157e2c38d",
+    "agent": "Learning",
+    "scenario": "S2",
+    "policy_version": "cold-start",
+    "decisions": 32,
+    "status": "DELIVERED",
+    "delivered": true,
+    "time_min": 29.0,
+    "cost": 100.0,
+    "distance_km": 5.0,
+    "route": "A",
+    "deadline_met": true,
+    "lateness_min": 0,
+    "reroutes": 0,
+    "waits": 4,
+    "failure_reason": ""
+  },
+  "trace": [
+    {
+      "step": 1,
+      "percept": {
+        "time": 0.0,
+        "status": "PLACED",
+        "current_route": null,
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": false,
+        "pickup_remaining": 5.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "ACCEPT_ORDER",
+          "route_id": null
+        },
+        "reason": "The order is placed; accept it.",
+        "evidence": {
+          "rule": "accept"
+        }
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": null,
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": null,
+        "values": {}
+      },
+      "after": {
+        "time": 0.0,
+        "status": "ACCEPTED",
+        "current_route": null,
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": false,
+        "pickup_remaining": 5.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 2,
+      "percept": {
+        "time": 0.0,
+        "status": "ACCEPTED",
+        "current_route": null,
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": false,
+        "pickup_remaining": 5.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "SELECT_ROUTE",
+          "route_id": "A"
+        },
+        "reason": "cold-start fixed tie-break",
+        "evidence": {
+          "context": "clear|heavy|regular",
+          "values": {},
+          "training": false,
+          "epsilon": 0
+        }
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": null,
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 0.0,
+        "status": "ROUTE_SELECTED",
+        "current_route": "A",
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": false,
+        "pickup_remaining": 5.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 3,
+      "percept": {
+        "time": 0.0,
+        "status": "ROUTE_SELECTED",
+        "current_route": "A",
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": false,
+        "pickup_remaining": 5.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "WAIT",
+          "route_id": null
+        },
+        "reason": "Food is not ready; wait one minute.",
+        "evidence": {
+          "rule": "wait_for_food"
+        }
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 1.0,
+        "status": "ROUTE_SELECTED",
+        "current_route": "A",
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": false,
+        "pickup_remaining": 4.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 4,
+      "percept": {
+        "time": 1.0,
+        "status": "ROUTE_SELECTED",
+        "current_route": "A",
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": false,
+        "pickup_remaining": 4.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "WAIT",
+          "route_id": null
+        },
+        "reason": "Food is not ready; wait one minute.",
+        "evidence": {
+          "rule": "wait_for_food"
+        }
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 2.0,
+        "status": "ROUTE_SELECTED",
+        "current_route": "A",
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": false,
+        "pickup_remaining": 3.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 5,
+      "percept": {
+        "time": 2.0,
+        "status": "ROUTE_SELECTED",
+        "current_route": "A",
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": false,
+        "pickup_remaining": 3.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "WAIT",
+          "route_id": null
+        },
+        "reason": "Food is not ready; wait one minute.",
+        "evidence": {
+          "rule": "wait_for_food"
+        }
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 3.0,
+        "status": "ROUTE_SELECTED",
+        "current_route": "A",
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": false,
+        "pickup_remaining": 2.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 6,
+      "percept": {
+        "time": 3.0,
+        "status": "ROUTE_SELECTED",
+        "current_route": "A",
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": false,
+        "pickup_remaining": 2.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "WAIT",
+          "route_id": null
+        },
+        "reason": "Food is not ready; wait one minute.",
+        "evidence": {
+          "rule": "wait_for_food"
+        }
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 4.0,
+        "status": "ROUTE_SELECTED",
+        "current_route": "A",
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 1.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 7,
+      "percept": {
+        "time": 4.0,
+        "status": "ROUTE_SELECTED",
+        "current_route": "A",
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 1.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "PICK_UP",
+          "route_id": null
+        },
+        "reason": "Food is ready and a route is selected; collect it.",
+        "evidence": {
+          "rule": "pickup"
+        }
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 5.0,
+        "status": "PICKED_UP",
+        "current_route": "A",
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 8,
+      "percept": {
+        "time": 5.0,
+        "status": "PICKED_UP",
+        "current_route": "A",
+        "progress": 0.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 0.0,
+        "distance_so_far": 0.0,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 6.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.04545455,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 4.545454545454546,
+        "distance_so_far": 0.2272727272727273,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 9,
+      "percept": {
+        "time": 6.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.04545455,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 4.545454545454546,
+        "distance_so_far": 0.2272727272727273,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 7.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.09090909,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 9.090909090909092,
+        "distance_so_far": 0.4545454545454546,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 10,
+      "percept": {
+        "time": 7.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.09090909,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 9.090909090909092,
+        "distance_so_far": 0.4545454545454546,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 8.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.13636364,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 13.636363636363637,
+        "distance_so_far": 0.6818181818181819,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 11,
+      "percept": {
+        "time": 8.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.13636364,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 13.636363636363637,
+        "distance_so_far": 0.6818181818181819,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 9.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.18181818,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 18.181818181818183,
+        "distance_so_far": 0.9090909090909092,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 12,
+      "percept": {
+        "time": 9.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.18181818,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 18.181818181818183,
+        "distance_so_far": 0.9090909090909092,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 10.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.22727273,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 22.72727272727273,
+        "distance_so_far": 1.1363636363636365,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 13,
+      "percept": {
+        "time": 10.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.22727273,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 22.72727272727273,
+        "distance_so_far": 1.1363636363636365,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 10.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.25,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 25.0,
+        "distance_so_far": 1.25,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 14,
+      "percept": {
+        "time": 10.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.25,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 25.0,
+        "distance_so_far": 1.25,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 11.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.29545455,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 29.545454545454547,
+        "distance_so_far": 1.4772727272727273,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 15,
+      "percept": {
+        "time": 11.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.29545455,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 29.545454545454547,
+        "distance_so_far": 1.4772727272727273,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 12.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.34090909,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 34.09090909090909,
+        "distance_so_far": 1.7045454545454546,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 16,
+      "percept": {
+        "time": 12.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.34090909,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 34.09090909090909,
+        "distance_so_far": 1.7045454545454546,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 13.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.38636364,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 38.63636363636364,
+        "distance_so_far": 1.9318181818181819,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 17,
+      "percept": {
+        "time": 13.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.38636364,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 38.63636363636364,
+        "distance_so_far": 1.9318181818181819,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 14.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.43181818,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 43.18181818181819,
+        "distance_so_far": 2.159090909090909,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 18,
+      "percept": {
+        "time": 14.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.43181818,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 43.18181818181819,
+        "distance_so_far": 2.159090909090909,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 15.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.47727273,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 47.727272727272734,
+        "distance_so_far": 2.3863636363636367,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 19,
+      "percept": {
+        "time": 15.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.47727273,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 47.727272727272734,
+        "distance_so_far": 2.3863636363636367,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 16.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.5,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 50.0,
+        "distance_so_far": 2.5,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 20,
+      "percept": {
+        "time": 16.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.5,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 50.0,
+        "distance_so_far": 2.5,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 17.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.54545455,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 54.54545454545455,
+        "distance_so_far": 2.7272727272727275,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 21,
+      "percept": {
+        "time": 17.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.54545455,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 54.54545454545455,
+        "distance_so_far": 2.7272727272727275,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 18.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.59090909,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 59.09090909090909,
+        "distance_so_far": 2.954545454545455,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 22,
+      "percept": {
+        "time": 18.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.59090909,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 59.09090909090909,
+        "distance_so_far": 2.954545454545455,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 19.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.63636364,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 63.63636363636364,
+        "distance_so_far": 3.1818181818181825,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 23,
+      "percept": {
+        "time": 19.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.63636364,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 63.63636363636364,
+        "distance_so_far": 3.1818181818181825,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 20.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.68181818,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 68.18181818181819,
+        "distance_so_far": 3.40909090909091,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 24,
+      "percept": {
+        "time": 20.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.68181818,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 68.18181818181819,
+        "distance_so_far": 3.40909090909091,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 21.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.72727273,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 72.72727272727273,
+        "distance_so_far": 3.6363636363636376,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 25,
+      "percept": {
+        "time": 21.0,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.72727273,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 72.72727272727273,
+        "distance_so_far": 3.6363636363636376,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 21.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.75,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 75.00000000000003,
+        "distance_so_far": 3.750000000000002,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 26,
+      "percept": {
+        "time": 21.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.75,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 75.00000000000003,
+        "distance_so_far": 3.750000000000002,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 22.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.79545455,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 79.54545454545458,
+        "distance_so_far": 3.9772727272727293,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 27,
+      "percept": {
+        "time": 22.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.79545455,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 79.54545454545458,
+        "distance_so_far": 3.9772727272727293,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 23.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.84090909,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 84.09090909090912,
+        "distance_so_far": 4.204545454545457,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 28,
+      "percept": {
+        "time": 23.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.84090909,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 84.09090909090912,
+        "distance_so_far": 4.204545454545457,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 24.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.88636364,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 88.63636363636367,
+        "distance_so_far": 4.431818181818184,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 29,
+      "percept": {
+        "time": 24.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.88636364,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 88.63636363636367,
+        "distance_so_far": 4.431818181818184,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 25.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.93181818,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 93.18181818181822,
+        "distance_so_far": 4.659090909090912,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 30,
+      "percept": {
+        "time": 25.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.93181818,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 93.18181818181822,
+        "distance_so_far": 4.659090909090912,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 26.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.97727273,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 97.72727272727276,
+        "distance_so_far": 4.886363636363639,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 31,
+      "percept": {
+        "time": 26.5,
+        "status": "IN_TRANSIT",
+        "current_route": "A",
+        "progress": 0.97727273,
+        "at_junction": false,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 97.72727272727276,
+        "distance_so_far": 4.886363636363639,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "MOVE",
+          "route_id": null
+        },
+        "reason": "Continue along the current route to the next decision point.",
+        "evidence": {}
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 27.0,
+        "status": "ARRIVED",
+        "current_route": "A",
+        "progress": 1.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 100.00000000000006,
+        "distance_so_far": 5.0000000000000036,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    },
+    {
+      "step": 32,
+      "percept": {
+        "time": 27.0,
+        "status": "ARRIVED",
+        "current_route": "A",
+        "progress": 1.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 100.00000000000006,
+        "distance_so_far": 5.0000000000000036,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "decision": {
+        "action": {
+          "kind": "CONFIRM_DELIVERY",
+          "route_id": null
+        },
+        "reason": "Arrived with the food; confirm delivery.",
+        "evidence": {
+          "rule": "confirm"
+        }
+      },
+      "state_before": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "state_after": {
+        "policy_version": "cold-start",
+        "training": false,
+        "selected_context": "clear|heavy|regular",
+        "values": {}
+      },
+      "after": {
+        "time": 29.0,
+        "status": "DELIVERED",
+        "current_route": "A",
+        "progress": 1.0,
+        "at_junction": true,
+        "routes": [
+          {
+            "route_id": "A",
+            "distance_km": 5,
+            "base_travel_min": 10,
+            "cost": 100,
+            "traffic_multiplier": 2.2,
+            "traffic": "heavy",
+            "available": true,
+            "well_lit": false,
+            "flood_risk": 0.8
+          },
+          {
+            "route_id": "B",
+            "distance_km": 8,
+            "base_travel_min": 16,
+            "cost": 150,
+            "traffic_multiplier": 1.1,
+            "traffic": "light",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.1
+          },
+          {
+            "route_id": "C",
+            "distance_km": 6,
+            "base_travel_min": 12,
+            "cost": 120,
+            "traffic_multiplier": 1.3,
+            "traffic": "moderate",
+            "available": true,
+            "well_lit": true,
+            "flood_risk": 0.3
+          }
+        ],
+        "weather": "clear",
+        "weather_multiplier": 1.0,
+        "deadline": 35.0,
+        "urgent": false,
+        "pickup_ready": true,
+        "pickup_remaining": 0.0,
+        "handling_min": 1.0,
+        "dropoff_min": 2.0,
+        "cost_so_far": 100.00000000000006,
+        "distance_so_far": 5.0000000000000036,
+        "context": {
+          "time_of_day": "day",
+          "food_type": "standard",
+          "customer_preference": "balanced",
+          "restaurant_backlog_min": 0.0
+        }
+      },
+      "error": null,
+      "environment_events": []
+    }
+  ],
+  "final_agent_state": {
+    "policy_version": "cold-start",
+    "training": false,
+    "selected_context": "clear|heavy|regular",
+    "values": {}
+  }
+}

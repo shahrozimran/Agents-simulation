@@ -1,0 +1,7 @@
+flowchart LR
+    P[Input / perception] --> D[Filter routes and adapt policy]
+    D --> A[Action]
+    A --> E[Environment]
+    E --> P
+    C[Collected context] --> D
+    X[External situational signals] --> C

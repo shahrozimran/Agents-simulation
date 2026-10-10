@@ -1,0 +1,8 @@
+flowchart LR
+    P[Input / perception] --> D[Execute active subgoal]
+    D --> A[Action]
+    A --> E[Environment]
+    E --> P
+    C[Delivery subgoals] --> D
+    E --> V[Validate subgoal]
+    V --> C

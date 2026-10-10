@@ -1,0 +1,8 @@
+flowchart LR
+    P[Input / perception] --> D[Update beliefs then apply rules]
+    D --> A[Action]
+    A --> E[Environment]
+    E --> P
+    C[Internal state] --> D
+    P --> C
+    D --> C
